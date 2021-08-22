@@ -1,0 +1,71 @@
+.about {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &__slider {
+        padding-top: 35px;
+    }
+    .slider__content {
+        @include flex(center, center, column);
+        text-align: center;
+        color: $colorGray;
+        &:hover {
+            color: $colorOrange;
+        }
+        &:hover .content__round {
+            border: 2px solid $colorOrange;
+        }
+        &:hover .content__round:before {
+            color: $colorOrange;
+        }
+    }
+    .content__round {
+        width: 120px;
+        height: 120px;
+        border: 2px solid $colorGray;
+        border-radius: 50%;
+        position: relative;
+        margin-bottom: 20px;
+        transition: .3s;
+        &:before {
+            @include font(60px, $colorGray, 'icomoon');
+            @include flex(center,center);
+            height: 100%;
+            transition: .3s;
+        }
+    }
+    .content__round_medal {
+        &:before {
+            content: '\e906';
+        }
+    }
+    .content__round_passport {
+        &:before {
+            content: '\f2bc';
+        }
+    }
+    .content__round_microphone {
+        &:before {
+            content: '\e907';
+        }
+    }
+    .content__round_camera {
+        &:before {
+            content: '\e908';
+        }
+    }
+    .content__title {
+        @include font(18px, inherit);
+        font-weight: 700;
+        line-height: 32px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        transition: .3s;
+    }
+    .content__text {
+        @include font(14px, inherit);
+        font-weight: 300;
+        line-height: 24px;
+        max-width: 240px;
+        transition: .3s;
+    }
+}

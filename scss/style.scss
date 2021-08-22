@@ -1,0 +1,27 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixin';
+@import 'main';
+
+
+// Блоки
+@import 'header/header';
+@import 'header/header-media';
+@import 'intro/intro';
+@import 'intro/intro-media';
+@import 'about/about';
+@import 'about/about-media';
+@import 'courses/courses';
+@import 'courses/_courses-media';
+@import 'gallery/gallery';
+@import 'gallery/gallery-media';
+@import 'video/video';
+@import 'video/video-media';
+@import 'teacher/teacher';
+@import 'teacher/teacher-media';
+@import 'campus/campus';
+@import 'campus/campus-media';
+@import 'news/news';
+@import 'news/news-media';
+@import 'footer/footer';
+@import 'footer/footer-media';

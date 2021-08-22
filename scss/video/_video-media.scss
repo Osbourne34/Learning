@@ -1,0 +1,131 @@
+.video {
+    @media(min-width: 480px) {
+        padding: 30px 0 35px;
+        &__img {
+            width: 370px;
+            height: 210px;
+        }
+        &__player {
+            top: 13px;
+            width: 272px;
+            height: 172px;
+        }
+        &__fone {
+            top: 14px;
+            width: 272px;
+            height: 172px;
+        }
+    }
+    @media (min-width: 576px) {
+        padding: 40px 0 35px;
+        &__img {
+            width: 420px;
+            height: 250px;
+        }
+        &__player {
+            top: 8px;
+            width: 308px;
+            height: 210px;
+        }
+        &__fone {
+            top: 17px;
+            width: 310px;
+            height: 202px;
+            &:before,
+            &:after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            &:before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                border: 1px solid #fff;
+                border-radius: 50%;
+            }
+            &:after {
+                content: '\f04b';
+                font-family: 'icomoon';
+                font-size: 20px;
+                color: #fff;
+                left: 51%;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 60px 0 35px;
+        &__img {
+            width: 500px;
+            height: 300px;
+        }
+        &__player {
+            top: 6px;
+            width: 369px;
+            height: 258px;
+        }
+        &__fone {
+            top: 20px;
+            width: 371px;
+            height: 244px;
+            &:before {
+                width: 80px;
+                height: 80px;
+            }
+            &:after {
+                font-size: 30px;
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        padding: 80px 0 70px;
+        &__img {
+            width: 700px;
+            height: 400px;
+        }
+        &__player {
+            top: 26px;
+            width: 515px;
+            height: 324px;
+        }
+        &__fone {
+            top: 27px;
+            width: 517px;
+            height: 323px;
+            &:before {
+                width: 120px;
+                height: 120px;
+                border: 2px solid #fff;
+            }
+            &:after {
+                font-size: 50px;
+            }
+        }
+    }
+    @media (min-width: 1170px) {
+        padding: 140px 0 100px;
+        &__img {
+            width: 1100px;
+            height: 623px;
+        }
+        &__player {
+            top: 42px;
+            width: 808px;
+            height: 506px;
+        }
+        &__fone {
+            top: 42px;
+            width: 809px;
+            height: 507px;
+            &:before {
+                width: 180px;
+                height: 180px;
+                border: 3px solid #fff;
+            }
+            &:after {
+                font-size: 80px;
+            }
+        }
+    }
+}

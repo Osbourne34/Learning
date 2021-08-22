@@ -1,0 +1,162 @@
+.news {
+    @media (min-width: 480px) {
+        .content__desc {
+            max-width: 300px;
+        }
+        @for $i from 1 to 8 {
+            #radio-#{$i}:checked ~ .accordion__label_#{$i} .accordion__content {
+                height: 105px;
+            }
+        }
+        .subslider__text {
+            font-size: 16px;
+        }
+        .subslider__img {
+            width: 100%;
+            height: 320px;
+        }
+    }
+    @media (min-width: 576px) {
+        padding: 40px 0;
+        &__wrap {
+            padding-top: 50px;
+        }
+        &__title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        &__accordion {
+            padding-bottom: 20px;
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 60px 0;
+        &__wrap {
+            padding-top: 70px;
+        }
+        &__title {
+            font-size: 28px; 
+        }
+        .accordion__text {
+            font-size: 18px;
+            padding: 15px 50px;
+        }
+        .accordion__label:before {
+            width: 30px;
+            height: 30px;
+        }
+        .accordion__label:after {
+            font-size: 22px;
+            top: 13px;
+            left: 18px;
+        }
+        .content__title {
+            font-size: 18px;
+        }
+        .content__img {
+            margin-right: 12px;
+        }
+        @for $i from 1 to 8 {
+            #radio-#{$i}:checked ~ .accordion__label_#{$i} .accordion__content {
+                height: 115px;
+            }
+        }
+        .slider__text {
+            font-size: 16px;
+            max-width: 320px;
+        }
+        .news__accordion {
+            padding-bottom: 0;
+        }
+        .news__inner {
+            .news__title {
+                margin-bottom: 0;
+                position: relative;
+                bottom: -25px;
+            }
+        }
+        .news__slider {
+            overflow: hidden;
+            position: relative;
+            padding-top: 50px;
+            .slick-list {
+                margin: 0 -10px;
+            }
+            .slick-slide {
+                margin: 0 10px;
+            }
+            & > .slick-dots {
+                position: absolute;
+                top: -5px;
+                right: 0;
+                display: flex;
+                button {
+                    width: 18px;
+                    height: 18px;
+                    border: 2px solid $colorOrange;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    font-size: 0;
+                    margin-left: 10px;
+                    transition: .3s;
+                    cursor: pointer;
+                }
+                .slick-active > button {
+                    background-color: $colorOrange;
+                }
+            }
+        }
+        .news__subslider {
+            overflow: hidden;
+            padding-bottom: 40px;
+            .slick-list {
+                margin: 0 -10px;
+            }
+            .slick-dots {
+                bottom: 15px;
+            }
+        }
+        .subslider__img {
+            height: 260px;
+        }
+    }
+    @media (min-width: 992px) {
+        padding: 80px 0 100px;
+        .news__wrap {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 50px;
+        }
+        .news__accordion {
+            max-width: 30%;
+        }
+        @for $i from 1 to 8 {
+            #radio-#{$i}:checked ~ .accordion__label_#{$i} .accordion__content {
+                height: 137px;
+            }
+        }
+        .news__inner {
+            max-width: 68%;
+            .news__title {
+                margin-bottom: 0;
+                position: relative;
+                bottom: -25px;
+            }
+        }
+        .news__accordion {
+            padding-top: 24px;
+            .news__title {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    @media (min-width: 1170px) {
+        padding: 125px 0 140px;
+        .news__wrap {
+            padding-top: 70px;
+        }
+        .news__title {
+            font-size: 30px;
+        }
+    }
+}

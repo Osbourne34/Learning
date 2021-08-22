@@ -1,0 +1,189 @@
+.intro {
+    @media (min-width: 480px) {
+        .slider__content {
+            padding: 50px 32px;
+        }
+        .content__title {
+            font-size: 33px;
+        }
+        .content__text {
+            font-size: 13px;
+        }
+        .content__btn {
+            font-size: 13px;
+        }
+        .slick-arrow {
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0;
+            background-color: rgba(0, 0, 2, 0.65);
+            border: none;
+            outline: none;
+            z-index: 1;
+            cursor: pointer;
+            transition: .5s;
+            &:before {
+                content: '';
+                @include font (25px, #fff, 'icomoon');
+                @include pos-left (50%,50%);
+                transform: translate(-50%,-50%);
+            }
+            &:hover {
+                background-color: $colorOrange;
+            }
+        }
+        .slick-prev {
+            left: 0;
+            &:before {
+                content: '\e904';
+            }
+        }
+        .slick-next {
+            right: 0;
+            &:before {
+                content: '\e903';
+            }
+        }
+    }
+    @media (min-width: 576px) {
+        .slider__content {
+            padding: 60px 40px;
+        }
+        .slick-arrow {
+            width: 45px;
+            height: 45px;
+            &:before {
+                font-size: 35px;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        .slider__content {
+            padding: 100px 70px;
+        }
+        .content__title {
+            font-size: 45px;
+        }
+        .content__text {
+            font-size: 16px;
+        }
+        .content__btn {
+            font-size: 16px;
+        }
+        .slick-arrow {
+            width: 65px;
+            height: 65px;
+            &:before {
+                font-size: 50px;
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        .slider__content {
+            padding: 150px 130px;
+            text-align: left;
+        }
+        .content__title {
+            font-size: 53px;
+        }
+        .content__text {
+            font-size: 18px;
+        }
+        .content__btn { 
+            font-size: 18px;
+        }
+        .slider-hover {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: .5s;
+            width: 65px;
+            opacity: 0;
+        }
+        .slider-hover_left {
+            left: 65px;
+        }
+        .slider-hover_right {
+            right: 65px;
+        }
+        .slider-hover__item {
+            height: 65px;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: .5s;
+        }
+        @for $i from 1 to 4 {
+            .slider-hover__item_#{$i} {
+                background-image: url('./../img/intro-#{$i}.jpg');
+            }
+        }
+        .active_slider {
+            opacity: 1;
+        }
+    }
+    @media (min-width: 1170px) {
+        .slider__content {
+            padding: 230px 130px 190px;
+            max-width: 910px;
+        }
+        .content__title {
+            font-size: 56px;
+        }
+    }
+    @media (min-width: 1250px) {
+        .slick-arrow {
+            width: 80px;
+            height: 80px;
+            &:before {
+                font-size: 70px;
+            }
+        }
+        .slider-hover {
+            width: 80px;
+        }
+        .slider-hover_left {
+            left: 80px;
+        }
+        .slider-hover_right {
+            right: 80px;
+        }
+        .slider-hover__item {
+            height: 80px;
+        }
+    }
+    @media (min-width: 1480px) {
+        .slider__content {
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 700px;
+        }
+        .content__title {
+            font-size: 61px;
+        }
+    }
+    @media (min-width: 1600px) {
+        .slick-arrow {
+            width: 100px;
+            height: 100px;
+            &:before {
+                font-size: 70px;
+            }
+        }
+        .slider-hover {
+            width: 100px;
+        }
+        .slider-hover_left {
+            left: 100px;
+        }
+        .slider-hover_right {
+            right: 100px;
+        }
+        .slider-hover__item {
+            height: 100px;
+        }
+    }
+}

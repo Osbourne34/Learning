@@ -1,0 +1,76 @@
+.teachers {
+    padding: 30px 0;
+    &__slider {
+        padding-top: 35px;
+    }
+    .slider__img {
+        width: 100%;
+        height: 302px;
+        overflow: hidden;
+    }
+    .slider__item {
+        &:hover .slider__more {
+            bottom: 0;
+        }
+    }
+    .slider__wrap {
+        margin: 0 auto;
+        position: relative;
+    }
+    .slider__more {
+        position: absolute;
+        bottom: -50%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 102, 0,.5);
+        transition: .5s;
+    }
+    .slider__inner {
+        padding: 18px 28px;
+        text-align: center
+    }
+    .slider__title {
+        @include font(18px, $colorWhite);
+        font-weight: 700;
+        margin-bottom: 0.5em;
+    }
+    .slider__text {
+        @include font(14px, $colorWhite);
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    .slider__socials {
+        @include flex(space-between, flex-start);
+        max-width: 234px;
+        margin: 0 auto;
+    }
+    .socials__link {
+        border: 1px solid $colorWhite;
+        border-radius: 5px;
+        width: 50px;
+        height: 50px;
+        @include flex(center,center);
+        transition: .5s;
+        &:hover {
+            background: $colorWhite;
+        }
+    }
+    .socials__link:before {
+        @include font(24px, $colorWhite, 'icomoon');
+    }
+    .socials__link:hover:before {
+        color: $colorOrange;
+    }
+    .socials__link_facebook:before {
+        content: '\f09a';
+    }
+    .socials__link_twitter:before {
+        content: '\f099';
+    }
+    .socials__link_google:before {
+        content: '\e909';
+    }
+    .socials__link_linkedin:before {
+        content: '\f0e1';
+    }
+}

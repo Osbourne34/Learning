@@ -1,0 +1,60 @@
+.intro {
+    position: relative;
+    &__slider {
+        position: relative;
+    }
+    .slider__item {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    @for $i from 1 to 4 {
+        .slider__item_#{$i} {
+            background-image: linear-gradient(rgba(0, 0, 2, 0.63), rgba(0, 0, 2, 0.63)), url('./../img/intro-#{$i}.jpg');
+        }
+    }
+    .slider__content {
+        padding: 30px 0 40px;
+        text-align: center;
+    }
+    .content__title {
+        @include font(25px, $colorLightGray, $RobotoSlab);
+        font-weight: 400;
+        line-height: 1.4;
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+        &_orange {
+            color: $colorOrange;
+        }
+    }
+    .content__text {
+        @include font(12px, $colorLightGray);
+        line-height: 2;
+        margin-bottom: 2em;
+    }
+    .content__btn {
+        @include font(12px, $colorLightGray);
+        padding: 0.9em 1.9em;
+        background-color: $colorOrange;
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        button {
+            cursor: pointer;
+            background-color: #fff;
+            font-size: 0;
+            border: none;
+            outline: none;
+            width: 40px;
+            height: 3px;
+            transition: .3s;
+        }
+    }
+    .slick-active button {
+        background-color: $colorOrange;
+    }
+}

@@ -1,0 +1,168 @@
+.header {
+    @media (min-width: 480px) {
+        .search__input {
+            max-width: 100%;
+        }
+    }
+    @media (min-width: 576px) {
+        .top__wrap {
+            @include flex(space-between, center);
+            padding: 16px 0;
+        }
+        &__info {
+            padding: 0;
+        }
+        .info__btn {
+            display: none;
+        }
+        &__menu {
+            padding: 0;
+        }
+        &__menu > .menu__link {
+            margin-right: 20px;
+        }
+        &__bottom {
+            padding: 20px 0;
+        }
+        &__navigation {
+            position: static;
+            height: 100%;
+            background-color: transparent;
+            opacity: 1;
+            z-index: 1;
+        }
+        .navigation__list {
+            flex-direction: row;
+        }
+        .navigation__item {
+            @include font(9px, $colorBlack);
+            font-weight: 700;
+            margin-bottom: 0;
+            margin-right: 5px;
+        }
+        .search__input {
+            width: 0;
+            border: 0px solid transparent;
+            position: absolute;
+            right: 35px;
+            padding: 3px 0;
+            font-size: 10px;
+        }
+        .active_input {
+            width: 150px;
+            border: 1px solid $colorGray;
+            padding: 3px 5px;
+        }
+    }
+    @media (min-width: 768px) {
+        .top__wrap {
+            font-size: 12px;
+        }
+        &__phone {
+            margin-right: 20px;
+        }
+        &__phone,
+        &__mail {
+            padding-left: 20px;
+        }
+        &__phone:before,
+        &__mail:before {
+            font-size: 14px;
+            top: -1px;
+        }
+        .menu__login:before {
+            font-size: 14px;
+        }
+        &__menu > .menu__link {
+            margin-right: 30px;
+        }
+        &__bottom {
+            padding: 25px 0;
+        }
+        &__logo {
+            height: 28px;
+        }
+        .logo__text {
+            font-size: 20px;
+        }
+        &__inner {
+            padding-top: 4px;
+        }
+        .navigation__item {
+            font-size: 12px;
+        }
+        .search__input {
+            font-size: 12px;
+        }
+    }
+    @media (min-width: 992px) {
+        .top__wrap {
+            font-size: 14px;
+        }
+        &__phone {
+            margin-right: 30px;
+        }
+        &__phone,
+        &__mail {
+            padding-left: 23px;
+        }
+        &__phone:before,
+        &__mail:before {
+            font-size: 16px;
+        }
+        .menu__login:before {
+            font-size: 16px;
+        }
+        &__menu > .menu__link {
+            margin-right: 35px;
+        }
+        &__bottom {
+            padding: 30px 0;
+        }
+        &__logo {
+            height: 35px;
+        }
+        .logo__text {
+            font-size: 25px;
+        }
+        .navigation__item {
+            font-size: 14px;
+            margin-left: 15px;
+        }
+        .search__input {
+            font-size: 14px;
+            right: 40px;
+        }
+        .active_input {
+            width: 250px;
+        }
+        .search__btn {
+            &:before {
+                font-size: 20px;
+            }
+        }
+    }
+    @media (min-width: 1170px) {
+        .container {
+            max-width: 1170px;
+        }
+        &__logo {
+            height: 40px;
+        }
+        .logo__text {
+            font-size: 30px;
+        }
+        &__inner {
+            position: relative;
+        }
+        .search__input {
+            right: 25px;
+        }
+        .active_input {
+            width: 95%;
+        }
+        .navigation__item {
+            margin-left: 25px;
+        }
+    }
+}

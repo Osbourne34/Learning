@@ -1,0 +1,153 @@
+.header {
+    &__top {
+        background-color: $colorHeaderBG;
+    }
+    .container {
+        max-width: 100%;
+    }
+    .top__wrap {
+        @include flex(flex-start, stretch, column);
+        @include font(9px, $colorLightGray);
+        font-weight: 300;
+    }
+    &__info {
+        @include flex(space-between, center);
+        padding: 12px 0 6px;
+    }
+    &__phone {
+        margin-right: 12px;
+    }
+    &__phone,
+    &__mail {
+        position: relative;
+        padding-left: 15px;
+    }
+    &__phone:before,
+    &__mail:before {
+        font-family: 'icomoon';
+        font-size: 11px;
+        @include pos-left(auto, 0);
+    }
+    &__phone:before {
+        content: '\e901';
+    }
+    &__mail:before {
+        content: '\e902';
+    }
+    .info__btn {
+        position: relative;
+        height: 10px;
+        width: 15px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        &:before {
+            content: '';
+            @include pos-left (0, 0);
+            width: 15px;
+            height: 2px;
+            background-color: #fff;
+            box-shadow: 0 4px 0 0 #fff, 0 8px 0 0 #fff;
+        }
+    }
+    .active_btn {
+        z-index: 4;
+    }
+    &__menu {
+        @include flex(space-between, center);
+        padding: 6px 0 12px;
+    }
+    .menu__login:before {
+        content: '\e900';
+        font-family: 'icomoon';
+        font-size: 11px;
+        position: relative;
+        top: 1px;
+        padding-right: 3px;
+    }
+    &__bottom {
+        background-color: #fff;
+        padding: 15px 0;
+    }
+    .bottom__wrap {
+        @include flex(space-between, center);
+    }
+    &__logo {
+        @include flex(flex-start, center);
+        height: 22px;
+    }
+    .logo__img {
+        max-width: 100%;
+        max-height: 100%;
+        margin-right: 8px;
+    }
+    .logo__text {
+        @include font(14px, $colorGray, $Roboto);
+        font-weight: 300;
+    }
+    &__inner {
+        @include flex(flex-start, center);
+    }
+    &__navigation {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        z-index: 3;
+        background-color: rgba(0,0,0,0.8);
+        width: 100%;
+        height: 100vh;
+        transition: .5s;
+        opacity: 0;
+    }
+    .navigation__list {
+        @include flex(center,center, column);
+        height: 100%;
+    }
+    .navigation__item {
+        font-size: 12px;
+        color: $colorWhite;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        padding: 0 5px;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        transition: .3s;
+        &:hover {
+            border-left: 2px solid $colorOrange;
+            border-right: 2px solid $colorOrange;
+            color: $colorOrange;
+        }
+    }
+    .navigation__item:last-child {
+        margin-bottom: 0;
+    }
+    .active_navigation {
+        left: 0;
+        opacity: 1;
+    }
+    &__search {
+        @include flex(flex-end,center);
+    }
+    .search__input {
+        font-size: 10px;
+        max-width: 60%;
+        padding: 2px 5px;
+        border: 1px solid $colorGray;
+        border-radius: 3px;
+        outline: none;
+        transition: .3s all;
+        z-index: 2;
+    }
+    .search__btn {
+        margin-left: 5px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        &:before {
+            content: '\f002';
+            @include font(16px, $colorBlack, 'icomoon');
+        }
+    }
+}
